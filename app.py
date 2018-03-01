@@ -6,10 +6,11 @@ from vk_worker import VkWorker
 with open('./config.json') as json_data_file:
     config = json.load(json_data_file)
 
-login = unicodedata.normalize('NFKD', config['user']).encode('ascii', 'ignore')
-password = unicodedata.normalize('NFKD', config['password']).encode('ascii', 'ignore')
+# login = unicodedata.normalize('NFKD', config['user']).encode('ascii', 'ignore')
+# password = unicodedata.normalize('NFKD', config['password']).encode('ascii', 'ignore')
+# print(type(config['user']), type(config['password']))
 
-worker = VkWorker(login, password)
+worker = VkWorker(config['user'], config['password'])
 
 flaskapp = Flask(__name__)
 

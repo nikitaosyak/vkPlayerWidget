@@ -5,11 +5,23 @@
     <meta name="viewport"
           content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
     <title>vk player</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="/static/styles.css">
     <script type="text/javascript" src="/static/index.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden">
-    <p>CURRENT KEK</p>
-    <p id="songContainer"></p>
+	<div style="
+		width: 500px;height:100px; background-color: rgba(77, 113, 152, 0.9);
+		overflow: hidden; border-radius: 10px;">
+		<img src="/static/logo.png" style="width:100px;height:100px;float: left;">
+		<div style="float:right; width: 400px;height: 100px; display: table">
+			<div style="display: table-cell; vertical-align: middle; padding-left: 16px">
+				<p style="font-size: 18px; color: #1e2e42; padding-bottom: 8px">current song:</p>
+		    	<p id="songContainer" style="font-size: 22px; color: #0e1824"></p>
+			</div>
+			
+		</div>
+	</div>
+	
 </body>
 </html>
