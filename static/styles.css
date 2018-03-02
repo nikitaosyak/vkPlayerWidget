@@ -1,7 +1,12 @@
 p {  
-    color: #332d28;
-    font-family: 'Roboto Mono', monospace;
+    color: #fffafa;
+    font-family: 'Rubik', sans-serif;
     margin: 0;
+}
+
+.abs {
+	position: absolute;
+	left: 154px;
 }
 
 body {  

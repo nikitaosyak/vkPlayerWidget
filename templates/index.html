@@ -5,12 +5,18 @@
     <meta name="viewport"
           content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
     <title>vk player</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="/static/styles.css">
     <script type="text/javascript" src="/static/index.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden">
-	<div style="
+	<div>
+		<img style="position: absolute;" src="/static/vk-player-overlay.png">
+		<p class="abs" style="top: 4px; font-size: 24px; font-weight: bold;"> CURRENT SONG: </p>
+		<p class="abs" id="songName" style="font-size: 40px; top: 42px; text-overflow: hidden;"> Song name</p>
+		<p class="abs" id="artistName" style="font-size: 24px; top: 102px;text-overflow: hidden;"> by dolboeb </p>
+	</div>
+	<!-- <div style="
 		width: 500px;height:100px; background-color: rgba(77, 113, 152, 0.9);
 		overflow: hidden; border-radius: 10px;">
 		<img src="/static/logo.png" style="width:100px;height:100px;float: left;">
@@ -21,7 +27,7 @@
 			</div>
 			
 		</div>
-	</div>
+	</div> -->
 	
 </body>
 </html>
