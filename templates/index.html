@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" style="margin: 0; overflow: hidden">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
-    <title>vk player</title>
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="/static/styles.css">
-    <script type="text/javascript" src="/static/index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/main.css">
+    <title>VK Song plugin</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/main.js"></script>
+    <script src="/static/index.js"></script>
 </head>
-<body style="margin: 0; overflow: hidden">
-	<div>
-		<img style="position: absolute;" src="/static/vk-player-overlay.png">
-		<p class="abs" style="top: 4px; font-size: 24px; font-weight: bold;"> CURRENT SONG: </p>
-		<p class="abs" id="songName" style="font-size: 40px; top: 42px; text-overflow: hidden;"> Song name</p>
-		<p class="abs" id="artistName" style="font-size: 24px; top: 102px;text-overflow: hidden;"> by dolboeb </p>
-	</div>
-	<!-- <div style="
-		width: 500px;height:100px; background-color: rgba(77, 113, 152, 0.9);
-		overflow: hidden; border-radius: 10px;">
-		<img src="/static/logo.png" style="width:100px;height:100px;float: left;">
-		<div style="float:right; width: 400px;height: 100px; display: table">
-			<div style="display: table-cell; vertical-align: middle; padding-left: 16px">
-				<p style="font-size: 18px; color: #1e2e42; padding-bottom: 8px">current song:</p>
-		    	<p id="songContainer" style="font-size: 22px; color: #0e1824"></p>
-			</div>
-			
-		</div>
-	</div> -->
-	
+<body>
+    <div class="plugin">
+        <div class="logo">
+            <img src="/static/vk.svg" alt="">
+        </div>
+        <div class="body">
+            <p class="header">CURRENT SONG</p>
+            <div class="content">
+                <div class="song" id="song">
+                    <div class="scroller"><span id="songName">Alleanza Radio Show EP312 - Barbuto</span></div>
+                </div>
+                <div class="artist">
+                    <span class="by">by</span>
+                    <div id="artist">
+                        <div class="scroller"><span id="artistName">Alleanza</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

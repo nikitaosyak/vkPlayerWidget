@@ -1,0 +1,107 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+.plugin {
+    background-color: #333;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.plugin .logo {
+    width: 140px;
+    height: 140px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #436EAB;
+}
+
+.plugin .logo img {
+    width: 110px;
+    height: 110px;
+}
+
+.plugin .body {
+    flex-grow: 1;
+    background-color: #132032;
+    width: calc(100% - 140px);
+}
+
+.plugin .body .content {
+    widows: 100%;
+}
+
+.plugin .body .content .song,
+.plugin .body .content .song .artist p,
+.plugin .body .header {
+    margin: 0;
+    padding-left: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.plugin .body .header {
+    box-sizing: border-box;
+    height: 33px;
+    line-height: 33px;
+    background-color: #304f7b;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.plugin .body .content .song {
+    font-size: 30px;
+    /*height: 56px;*/
+    padding: 18px 0 10px 10px;
+    margin-right: 10px;
+    width: calc(100% - 10px);
+}
+
+.plugin .body .content .artist {
+    display: flex;
+    margin-top: 10px;
+}
+
+.plugin .body .content .artist .by,
+.plugin .body .content .artist #artist {
+    font-size: 20px;
+}
+
+.plugin .body .content .artist .by {
+    margin-left: 10px;
+    font-weight: 300;
+    width: 35px;
+    min-width: 35px;
+}
+
+.plugin .body .content .artist #artist {
+    box-sizing: border-box;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 0px;
+    margin-right: 10px;
+    width: calc(100% - 56px);
+    flex-grow: 1;
+}
+
+
+.scroller {
+    display: block;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+    transition: scroll 5s linear;
+}
+
+.scroller::-webkit-scrollbar { 
+    display: none; 
+}
+
+.scroller span {
+
+}
