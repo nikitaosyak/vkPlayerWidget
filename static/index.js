@@ -7,7 +7,7 @@ function initScroller(index, scroller){
     var left = 0;
     var scroll = function(){
         setTimeout(function(){
-            console.log(scroller[0].scrollWidth, scroller[0].clientWidth)
+            //console.log(scroller[0].scrollWidth, scroller[0].clientWidth)
             if (left === 0){
                 left = scroller[0].scrollWidth - scroller[0].clientWidth
             } else {
@@ -33,16 +33,21 @@ window.onload = function() {
         }).then(function(responce) {
             if (responce.status !== 200) { console.warn('failed to get song'); return }
             responce.json().then(function(json) {
-                console.log(json)
+                // console.log(json)
                 // songContainer.innerHTML = json.song
-                const args = json.song.split('–')
-                songNameHTML.innerHTML = args[1].trim()
-                artistName.innerHTML =  args[0].trim()
-                //setTimeout(getSong, 10000)
+                if (json.song && json.song.length > 0) {
+                    const args = json.song.split('–')
+                    songNameHTML.innerHTML = args[1].trim()
+                    artistName.innerHTML =  args[0].trim()
+                } else {
+                    songNameHTML.innerHTML = "NO SONG"
+                    artistName.innerHTML = "NO ARTIST"
+                }
+                setTimeout(getSong, 10000)
             })
         }).catch(console.error)
 
-        setInterval(getSong, 10000)
+        //setInterval(getSong, 10000)
     }
     getSong()
 }
