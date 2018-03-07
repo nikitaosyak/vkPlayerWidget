@@ -38,9 +38,11 @@ window.onload = function() {
                 const args = json.song.split('–')
                 songNameHTML.innerHTML = args[1].trim()
                 artistName.innerHTML =  args[0].trim()
-                setTimeout(getSong, 10000)
+                //setTimeout(getSong, 10000)
             })
         }).catch(console.error)
+
+        setInterval(getSong, 10000)
     }
     getSong()
 }
